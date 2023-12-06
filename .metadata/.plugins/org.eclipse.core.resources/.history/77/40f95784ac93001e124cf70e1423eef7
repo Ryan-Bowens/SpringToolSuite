@@ -1,0 +1,9 @@
+package com.ryan.mvcdemo.models;
+
+public class Donation {
+
+	public Donation() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

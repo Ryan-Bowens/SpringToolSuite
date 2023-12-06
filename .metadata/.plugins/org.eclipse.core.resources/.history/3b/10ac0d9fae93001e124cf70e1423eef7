@@ -1,0 +1,23 @@
+package com.ryan.mvcdemo.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.ryan.mvcdemo.models.Donation;
+import com.ryan.mvcdemo.repositories.DonationRepository;
+
+@Service
+public class DonationService {
+	
+	private final DonationRepository donationRepo;
+
+	public DonationService(DonationRepository donationRepo) {
+		this.donationRepo = donationRepo;
+	}
+	
+	public List<Donation> getAll(){
+		return donationRepo.findAll();
+	}
+
+}

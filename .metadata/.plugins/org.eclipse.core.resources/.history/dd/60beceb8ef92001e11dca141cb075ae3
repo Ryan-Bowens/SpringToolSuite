@@ -1,0 +1,25 @@
+package com.ryan.sessionformdemo.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import jakarta.servlet.http.HttpSession;
+
+@Controller 	//ctrl + shift + o to auto import ^
+@RequestMapping("/home") //dont need this rn, its just proper... think of it like 100s of controllers/webpages
+public class HomeController {
+
+	@GetMapping("")
+	public String setCount(HttpSession session) {
+		session.setAttribute("count", 0);
+//							("name", setToInitialNum)
+		return "counterPage.jsp";
+	}
+	
+	@GetMapping("/get/count")
+	public String getCount() {
+		return "countGet.jsp";
+	}
+	
+}

@@ -1,0 +1,13 @@
+package com.ryan.daikichipathvariable.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DaikichiController {
+
+	@GetMapping("/daikichi")
+	public String welcome() {
+		return "welcome.jsp";
+	}
+	
+}

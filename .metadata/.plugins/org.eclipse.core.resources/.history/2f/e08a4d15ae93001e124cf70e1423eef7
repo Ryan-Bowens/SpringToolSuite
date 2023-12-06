@@ -1,0 +1,5 @@
+package com.ryan.mvcdemo.repositories;
+
+public interface DonationRepository {
+
+}

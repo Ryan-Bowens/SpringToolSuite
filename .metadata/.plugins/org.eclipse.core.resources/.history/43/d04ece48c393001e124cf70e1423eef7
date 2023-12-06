@@ -1,0 +1,16 @@
+package com.ryan.daikichipathvariable.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/daikichi")
+public class DaikichiController {
+
+	@GetMapping("")
+	public String welcome() {
+		return "welcome.jsp";
+	}
+	
+}

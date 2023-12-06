@@ -1,0 +1,23 @@
+package com.ryan.daikichipathvariable.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+@RequestMapping("")
+public class DaikichiTravelController {
+
+	@GetMapping("")
+	public String travelTo(@RequestParam("keyword") String cityValue, Model model) {
+		model.addAttribute("cityValue", cityValue);
+		return "city.jsp";
+	}
+
+	@GetMapping("/travel")
+	public String travelFrom() {
+		return "city.jsp";
+	}
+}
